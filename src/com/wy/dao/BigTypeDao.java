@@ -67,7 +67,7 @@ public class BigTypeDao {
     BigTypeForm big = null;
     try {
       this.ps = connection.prepareStatement("select * from tb_bigtype order by id DESC");
-      ResultSet rs = ps.executeQuery();
+      ResultSet rs = ps.executeQuery(); 
       while (rs.next()) {
         big = new BigTypeForm();
         big.setId(Integer.valueOf(rs.getString(1)));
